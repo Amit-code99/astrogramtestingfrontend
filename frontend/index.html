@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Astrogram</title>
+    <!-- Basic CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' http://localhost:8000 http://192.168.1.23:8000; img-src 'self' data: blob: http://localhost:8000 http://192.168.1.23:8000 *; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; connect-src 'self' http://localhost:8000 http://192.168.1.23:8000 ws://localhost:8000 ws://192.168.1.23:8000 wss://localhost:7880 wss://192.168.1.23:7880 ws://localhost:7880 ws://192.168.1.23:7880 http://localhost:5001 http://192.168.1.23:5001 http://localhost:5010 http://192.168.1.23:5010 ws://localhost:5001 ws://192.168.1.23:5001 ws://localhost:5010 ws://192.168.1.23:5010 https://cdn.jsdelivr.net;">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div id="app-container">
+        <!-- Sidebar Navigation (Desktop) / Bottom Nav (Mobile) -->
+        <nav id="main-nav" class="hidden">
+            <div class="nav-brand">
+                <h1>Astrogram</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" data-route="feed" class="nav-item active"><span class="icon">🏠</span><span class="nav-text">Home</span></a></li>
+                <li><a href="#" data-route="search" class="nav-item"><span class="icon">🔍</span><span class="nav-text">Search</span></a></li>
+                <li><a href="#" data-route="post" class="nav-item"><span class="icon">➕</span><span class="nav-text">Create</span></a></li>
+                <li><a href="#" data-route="live" class="nav-item"><span class="icon">🔴</span><span class="nav-text">Live</span></a></li>
+                <li><a href="#" data-route="chat" class="nav-item"><span class="icon">💬</span><span class="nav-text">Messages</span></a></li>
+                <li><a href="#" data-route="notifications" class="nav-item"><span class="icon">❤️</span><span class="nav-text">Notifications</span></a></li>
+                <li><a href="#" data-route="profile" class="nav-item"><span class="icon">👤</span><span class="nav-text">Profile</span></a></li>
+            </ul>
+            <div class="nav-footer">
+                <a href="#" id="logout-btn" class="nav-item"><span class="icon">🚪</span><span class="nav-text">Log Out</span></a>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main id="main-content">
+            <!-- Dynamic content will be injected here via DOM manipulation -->
+        </main>
+        
+        <!-- Toast Notifications Container -->
+        <div id="toast-container"></div>
+    </div>
+
+    <!-- Application Scripts (Type Module for ES6 imports) -->
+    <script type="module" src="/assets/js/app.js"></script>
+</body>
+</html>
